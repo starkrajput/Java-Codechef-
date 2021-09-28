@@ -1,0 +1,29 @@
+
+#include <bits/stdc++.h> 
+
+using namespace std;
+int gcd(int l,int b)
+{
+     if(b== 0)
+    {
+        return l;
+    }
+    return gcd(b,l%b);
+}
+
+int main() 
+{
+    int t;
+    std::cin >>t;
+    while(t--)
+    {
+        int l,b;
+        cin>>l>>b;
+        int c=gcd(l,b);
+        int square=(l/c)*(b/c);
+        std::cout << square << std::endl;
+    }
+	
+
+	return 0;
+}
